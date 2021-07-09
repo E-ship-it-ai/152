@@ -3410,7 +3410,7 @@ input, select, textarea {
 
 					#header > nav > ul > li a {
 						border: 0;
-						color: rgba(255, 255, 255, 0.35);
+						color:#001652;
 						display: inline-block;
 						font-size: 0.6em;
 						font-weight: bold;
@@ -3738,7 +3738,7 @@ input, select, textarea {
 			-ms-transition: color 0.2s ease;
 			transition: color 0.2s ease;
 			border: 0;
-			color: rgba(255, 255, 255, 0.35);
+			color: #493382;
 			display: block;
 			font-size: 0.6em;
 			font-weight: bold;
@@ -3782,7 +3782,7 @@ input, select, textarea {
 			}
 
 			#sidebar nav a.active {
-				color: #511A93;
+				color: #7650d4;
 			}
 
 				#sidebar nav a.active:after {
@@ -3873,6 +3873,11 @@ input, select, textarea {
 
 /* Intro */
 
+.svg {
+	background-image: url("images/Dimond.svg");
+	background-repeat: no-repeat;
+	min-height: 200px;
+  }
 	#intro {
 		background-attachment: fixed;
 		background-image: url("images/Subtle-Prism.svg");
@@ -3909,14 +3914,98 @@ input, select, textarea {
 
 		}
 
-		#motji {
-			/* standard styling */
-			background-color: blue;
-			color: white;
-			left: 50px;
-			width: 20px;
-			height: 50px;
-			padding: 20px 10px 0px 20px;
-			/* transform syntax */
+		@keyframes one{
+			0%{
+				transform: translate(3px, 4px);
+			}
+			15%{
+				transform: translate(30px, 0px);
+			}
+			35%{
+				transform: translate(-10px, 20px);
+			}
+			50%{
+				transform: translate(10px, 400px);
+				transform: scale(4);
+			}
+			80%{
+				transform: translate(-10px, 50px);
+			}
+			100%{
+				transform: translate(343px, 0px);
+			}
 		}
-		#motji:hover {transform:scale (100,0)};
+		
+		@keyframes two{
+			0%{
+				transform:  scale(1.5);
+			}
+			25%{
+				transform:  scale(4);
+				height:50px;
+			}
+			30%{
+				transform:  scale(6);
+				height:60px;
+			}
+			50%{
+				transform:  scale(10);
+			}
+			100%{
+				transform:  scale(100);
+			}
+		}
+		
+		@keyframes three{
+			0%{
+				transition: opacity 3s linear;
+			}
+			85%{
+				visibility: hidden;
+				opacity: 0;
+				transition: visibility 0s 2s, opacity 2s linear;
+			  }
+			
+		}
+		#button_spin{
+			background-color: #A570E6;
+			width: 200px;
+			height: 200px;
+		}
+
+		#button_spin:focus {
+			background-color: #511A93;
+			animation-name: one ;
+			animation-duration: 200ms;
+
+		}
+		#button_enlarge{
+			background-color: #A570E6;
+			width: 200px;
+			height: 200px;	
+		}
+
+		#button_enlarge:focus {
+			background-color: #511A93;
+			animation-name: two ;
+			animation-duration: 500ms;
+
+		}
+
+		#button_fade{
+			background-color: #A570E6;
+			width: 200px;
+			height: 200px;
+
+		}
+
+		#button_fade:focus {
+			background-color: #511A93;
+			animation-name: three ;
+			animation-duration: 2000ms;
+
+		}
+		#canvas {
+			display: block; 
+			width: 400px;
+		  }
